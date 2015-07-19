@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<title>Chat</title>
+	<link rel='stylesheet' href='css/main.css'>
+	<script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js'></script>
+	<script src='js/main.js'></script>
+</head>
+<body>
+	<div id='page_container'>
+
+		<!-- create username -->
+		<div id='login'>
+			<form id='check_username'>
+				<label for='username_input'>
+				<input type='text' id='username_input'>
+				<input type='submit'>
+			</form>
+		</div>
+
+		<div id='chat_view'>
+			<div id='chat_window'></div>
+			<div id='username_list'></div>
+			<div id='chat_input'>
+				<form id='chat_input_form'>
+					<input type='text' id='message_input'>
+					<input type='submit'>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
