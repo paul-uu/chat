@@ -16,22 +16,25 @@
 		<!-- create username -->
 		<div id='login'>
 			<form id='check_username'>
-				<label for='username_input'>
+				<label for='username_input'>Welcome, enter a username:
 				<input type='text' id='username_input'>
-				<input type='submit'>
+				<input type='submit' id='login_submit'>
 			</form>
+			<div id='login_error' class='login_message'></div>
 		</div>
 
+		<!-- Chat room -->
 		<div id='chat_view'>
 			<div id='chat_window'></div>
 			<div id='username_list'></div>
 			<div id='chat_input'>
 				<form id='chat_input_form'>
-					<input type='text' id='message_input'>
-					<input type='submit'>
+					<input type='text' id='message_input' autofocus>
+					<button type='submit' id='send_message_button'>send</button>
 				</form>
 			</div>
 		</div>
+
 
 	</div>
 </body>
