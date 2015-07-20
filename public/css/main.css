@@ -1,12 +1,100 @@
-* {
-	box-sizing: border-box;
+* { 
+	box-sizing: border-box; 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;	
 }
 html, body {
 	padding: 0 0;
 	margin: 0 0;
 	height: 100%;
 	position: relative;
+	color: #444;	
 }
+.hide { display: none; }
+
+
+/* Login view */
+#login {
+	display: none;
+	max-width: 500px;
+	margin: 50px auto 0 auto;
+}
+#check_username label {
+	text-align: center;
+	display: block;
+	color: #444;
+}
+#login_submit {
+	width: 100px;
+	margin: 20px auto;
+	display: block;
+}
+#username_input {
+	display: block;
+	width: 275px;
+	height: 34px;
+	margin: 10px auto;
+	padding: 6px;
+	font-size: 20px;
+	color: #555;
+}
+input[type=text] {
+	outline: none;
+}
+
+
+
+
+/* Chat view */
 #chat_view {
 	display: none;
+	width: 600px;
+	border: 1px solid #444;
+	margin: 30px auto;
+	overflow: scroll;
+}
+#chat_window {
+	width: 400px;
+	vertical-align: top;
+	overflow-y: scroll;
+}
+#chat_view::-webkit-scrollbar {
+	display: none;
+}
+#chat_view::-moz-scrollbar {
+	display: none;
+}
+#chat_view::-o-scrollbar {
+	display: none;
+}
+
+#username_list {
+	width: 193px;
+	height: 500px;
+	border-left: 1px solid #aaa;
+}
+
+#chat_window, #username_list {
+	display: inline-block;
+	height: 500px;
+	padding: 10px;
+}
+#message_input {
+	width: 90%;
+	height: 24px;
+	padding: 5px;
+	font-size: 16px;
+	float: left;
+}
+#send_message_button {
+	width: 10%;
+	height: 24px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.msg_status {
+	color: #777;
+}
+.chat_username {
+	font-weight: bold;
 }
