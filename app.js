@@ -29,6 +29,8 @@ io.sockets.on('connection', function(socket) {
 			callback(true);
 			socket.username = data;
 			username_list[socket.username] = socket;
+			//io.sockets.emit('server -- new user', data);
+			socket.broadcast.emit('server -- new user', data);
 			update_usernames();
 		}
 	});
@@ -42,10 +44,12 @@ io.sockets.on('connection', function(socket) {
 												 });
 	});
 
-	socket.on('dosconnect', function(data) {
-		if (!socket.nickname) return;
+	socket.on('disconnect', function(data) {
+		if (!socket.username) return;
 		delete username_list[socket.username];
 		update_usernames();
+		io.sockets.emit('server -- user left', socket.username);
+		console.log('user has left');
 	});
 
 	// Server emitted events/functions
