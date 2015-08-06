@@ -48,7 +48,7 @@ input[type=text] {
 #chat_view {
 	display: none;
 	width: 600px;
-	border: 1px solid #444;
+	border: 1px solid #888;
 	margin: 30px auto;
 	overflow: scroll;
 }
@@ -68,15 +68,17 @@ input[type=text] {
 }
 
 #username_list {
-	width: 193px;
+	width: 198px;
 	height: 500px;
-	border-left: 1px solid #aaa;
+	background-color: #eeeeee;
 }
 
 #chat_window, #username_list {
 	display: inline-block;
+	float: left;
 	height: 500px;
 	padding: 10px;
+	border-bottom: 1px solid #888;
 }
 #message_input {
 	width: 90%;
@@ -84,12 +86,21 @@ input[type=text] {
 	padding: 5px;
 	font-size: 16px;
 	float: left;
+	margin: 0 0;
+	border: none;
 }
 #send_message_button {
+	float: right;
 	width: 10%;
 	height: 24px;
 	vertical-align: top;
 	display: inline-block;
+	margin: 0 0;
+	border: none;
+	cursor: pointer;
+}
+#send_message_button:hover {
+	background-color: #ccc;
 }
 
 .msg_status {
