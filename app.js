@@ -37,11 +37,13 @@ io.sockets.on('connection', function(socket) {
 
 	socket.on('client -- send message', function(data, callback) {
 		var message = data.trim();
-		io.sockets.emit('server -- new message', {
-													message: message, 
-													username: socket.username
-													// time
-												 });
+		io.sockets.emit('server -- new message', { message: message, username: socket.username });
+	});
+	socket.on('client  -- whisper', function(data, callback) {
+		var msg       = data.msg,
+			recipient = data.recipient;
+		// check if recipient is valid user
+		
 	});
 
 	socket.on('disconnect', function(data) {
@@ -49,7 +51,7 @@ io.sockets.on('connection', function(socket) {
 		delete username_list[socket.username];
 		update_usernames();
 		io.sockets.emit('server -- user left', socket.username);
-		console.log('user has left');
+		console.log(socket.username + ' has left');
 	});
 
 	// Server emitted events/functions
